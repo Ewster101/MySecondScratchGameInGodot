@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bsrcmjmxdimb6"]
+
+[ext_resource type="Script" uid="uid://b87j68irra3uj" path="res://Scenes/Player.gd" id="1_kyqiw"]
+[ext_resource type="Texture2D" uid="uid://cugceoqqsr02p" path="res://Sprites/Rocket.svg" id="1_rpqav"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kyqiw"]
+radius = 5.0
+height = 36.0
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_gntrk"]
+points = PackedVector2Array(-18, -12, -1, -6, -1, 6, -18, 13)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=580809341]
+script = ExtResource("1_kyqiw")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1881992608]
+texture = ExtResource("1_rpqav")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=879333770]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_kyqiw")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=543536284]
+shape = SubResource("ConvexPolygonShape2D_gntrk")

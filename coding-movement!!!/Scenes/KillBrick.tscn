@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bjgunn3padtnl"]
+
+[ext_resource type="Script" uid="uid://d321n3tap6bm7" path="res://Scenes/KillBrick.gd" id="1_v5ptx"]
+[ext_resource type="Texture2D" uid="uid://dp8lb57kbf4e2" path="res://Sprites/KillBrick.svg" id="1_ydc2i"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_v5ptx"]
+points = PackedVector2Array(107, -7, -109, -100, -107, 100)
+
+[node name="Area2D" type="Area2D" unique_id=1259754523]
+script = ExtResource("1_v5ptx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=814789476]
+texture = ExtResource("1_ydc2i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=506827417]
+shape = SubResource("ConvexPolygonShape2D_v5ptx")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

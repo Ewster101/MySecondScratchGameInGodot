@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bxkyx1k7beoku"]
+
+[ext_resource type="Texture2D" uid="uid://bk3i4umf2nfbf" path="res://Sprites/StagePass.svg" id="1_kgbh8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0k8vg"]
+size = Vector2(152, 34)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=1152989821]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=40395323]
+texture = ExtResource("1_kgbh8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1365711250]
+shape = SubResource("RectangleShape2D_0k8vg")
